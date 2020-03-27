@@ -36,6 +36,9 @@ class entrepreneurspast extends onlineAtlas
 			'downloadFilenameBase' => 'entrepreneurspast',
 			'downloadInitialNotice' => "This data has been produced from the BBCE (PI: R.J. Bennett) with funding from the ESRC (ES/M010953), using an enhanced version of the digital census data from Schürer, K. and Higgs, E. (2014) Integrated Census Microdata (I-CeM), 1851-1911 [data collection] Colchester, Essex: UK Data Archive [distributor] SN: 7481, http://dx.doi.org/10.5255/UKDA-SN-7481-1; and Bennett, R., Smith, H., Van Lieshout, C., Montebruno Bondi, P., and Newton, G. (2020) BBCE - The British Business Census of Entrepreneurs [data collection] Colchester, Essex, UK data Archives [distributor].",
 			
+			// Disable full descriptions
+			'enableFullDescriptions' => false,
+			
 			// Datasets
 			'datasets' => array (1851, 1861, 1871, 1881, 1891, 1901, 1911),
 			
