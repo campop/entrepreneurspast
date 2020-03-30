@@ -51,11 +51,11 @@ class entrepreneurspast extends onlineAtlas
 			
 			// Colour stops
 			'colourStops' => array (	// Colour scales can be created at http://www.colorbrewer.org/
-				'#4575b5',	// Blue - least
-				'#849eb9',
-				'#ffffbf',	// Yellow
-				'#fab884',
-				'red'		// Red - most
+				'#fffe85',	// Yellow - least
+				'#f9d05a',
+				'#f2a732',	// Orange
+				'#af5312',
+				'#690100',	// Brown - most
 			),
 			
 			// Defaults
