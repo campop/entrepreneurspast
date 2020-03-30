@@ -44,9 +44,12 @@ class entrepreneurspast extends onlineAtlas
 			
 			// Disable zoomed out mode
 			'zoomedOut' => false,
-			'farField' => false,
+			
+			// Name field for summary box
+			'farField' => 'TOWN',
 			
 			// Unknown values
+			'valueUnknown' => -9999,
 			'colourUnknown' => false,
 			
 			// Colour stops
