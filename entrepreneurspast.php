@@ -85,12 +85,12 @@ class entrepreneurspast extends onlineAtlas
 				
 				// Data fields
 				'UrbanClass' => array (
-					'label' => 'Urban Classification',
+					'label' => 'Urban classification',
 					'description' => 'Urban/rural classification',
 					'intervals' => array (
-						'Urban'					=> '#74b273',
+						'Urban'					=> '#0071fe',
 						'Rural higher density'	=> '#d2ffbe',
-						'Rural'					=> '#0071fe',
+						'Rural'					=> '#74b273',
 					),
 				),
 				'N_EntsTot' => array (
