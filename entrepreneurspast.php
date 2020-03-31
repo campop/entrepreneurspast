@@ -77,10 +77,15 @@ class entrepreneurspast extends onlineAtlas
 					'general' => true,
 				),
 				'TOWN' => array (
-					'label' => 'Town',
-					'description' => 'Town',
+					'label' => 'Towns',
+					'description' => 'Towns',
 					'intervals' => '',
-					'general' => true,
+					'general' => false,		// Available as a field in its own right, as well as used for area labels
+					'intervalsWildcard' => 'Town (by name)',
+					'intervals' => array (
+						'Town (by name)'	=> 'blue',
+						'Other areas'		=> NULL,
+					),
 				),
 				
 				// Data fields
