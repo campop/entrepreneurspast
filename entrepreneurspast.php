@@ -82,6 +82,8 @@ class entrepreneurspast extends onlineAtlas
 					'intervals' => '',
 					'general' => true,
 				),
+				
+				// Data fields
 				'UrbanClass' => array (
 					'label' => 'Urban Classification',
 					'description' => 'Urban/rural classification',
@@ -90,10 +92,7 @@ class entrepreneurspast extends onlineAtlas
 						'Rural higher density'	=> '#d2ffbe',
 						'Rural'					=> '#0071fe',
 					),
-					'general' => true,
 				),
-				
-				// Data fields
 				'N_EntsTot' => array (
 					'label' => 'Total',
 					'description' => 'Number of entrepreneurs, total',
