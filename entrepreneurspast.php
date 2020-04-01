@@ -46,7 +46,7 @@ class entrepreneurspast extends onlineAtlas
 			'zoomedOut' => false,
 			
 			// Name field for summary box
-			'farField' => 'TOWN',
+			'farField' => 'REGDIST',
 			
 			// Unknown values
 			'valueUnknown' => -9999,
@@ -73,6 +73,12 @@ class entrepreneurspast extends onlineAtlas
 				'year' => array (
 					'label' => 'Year',
 					'description' => 'Year',
+					'intervals' => '',
+					'general' => true,
+				),
+				'REGDIST' => array (
+					'label' => 'Registration district',
+					'description' => 'Registration district',
 					'intervals' => '',
 					'general' => true,
 				),
@@ -387,6 +393,7 @@ class entrepreneurspast extends onlineAtlas
 		# Compile the SQL
 		$sql = "
 			  /* Domain-specific fields */
+			  `REGDIST` VARCHAR(255) NOT NULL COMMENT 'Registration district',
 			  `CEN` INT(11) NOT NULL COMMENT 'CEN (e.g. from CEN_1851)',
 			  `TOWN` VARCHAR(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Town',
 			  `UrbanClass` VARCHAR(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Urban classification',
