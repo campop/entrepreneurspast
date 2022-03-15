@@ -395,8 +395,8 @@ class entrepreneurspast extends onlineAtlas
 			  /* Domain-specific fields */
 			  `REGDIST` VARCHAR(255) NOT NULL COMMENT 'Registration district',
 			  `CEN` INT(11) NOT NULL COMMENT 'CEN (e.g. from CEN_1851)',
-			  `TOWN` VARCHAR(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Town',
-			  `UrbanClass` VARCHAR(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Urban classification',
+			  `TOWN` VARCHAR(255) NOT NULL COMMENT 'Town',
+			  `UrbanClass` VARCHAR(255) NOT NULL COMMENT 'Urban classification',
 		";
 		
 		# Add each data field
