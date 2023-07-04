@@ -432,7 +432,7 @@ class entrepreneurspast extends onlineAtlas
 		# Set local styles - reduction of panel from 330px down by 70px
 		echo '
 		<style type="text/css">
-			body nav {width: 260px;}
+			body #mapcontainers nav {width: 260px;}
 			body .activearea {right: 260px;}
 			body .leaflet-control-layers, body .leaflet-control-attribution, body .summary {right: 260px;}
 			body .summary {width: 270px;}
