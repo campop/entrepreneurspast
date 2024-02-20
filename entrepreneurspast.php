@@ -423,7 +423,7 @@ class entrepreneurspast extends onlineAtlas
 	
 	
 	# Home page
-	public function home ($aboutPath = false, $additionalCss = false)
+	public function home ($additionalCss = false)
 	{
 		# Set local styles - reduction of panel from 330px down by 70px
 		$additionalCss = '
@@ -435,7 +435,7 @@ class entrepreneurspast extends onlineAtlas
 		';
 		
 		# Run the main map
-		return parent::home ($this->extendedApplicationRoot, $additionalCss);
+		return parent::home ($additionalCss);
 	}
 }
 
