@@ -427,11 +427,11 @@ class entrepreneurspast extends onlineAtlas
 	{
 		# Set local styles - reduction of panel from 330px down by 70px
 		$additionalCss = '
-			body #mapcontainers nav {width: 260px;}
-			body .activearea {right: 260px;}
-			body .leaflet-control-layers, body .leaflet-control-attribution, body .summary {right: 260px;}
-			body .summary {width: 270px;}
-			body .geocoder input {width: 200px;}
+			#onlineatlas #mapcontainers nav {width: 260px;}
+			#onlineatlas .activearea {right: 260px;}
+			#onlineatlas .leaflet-control-layers, #onlineatlas .leaflet-control-attribution, #onlineatlas .summary {right: 260px;}
+			#onlineatlas .summary {width: 270px;}
+			#onlineatlas .geocoder input {width: 200px;}
 		';
 		
 		# Run the main map
