@@ -15,10 +15,6 @@ class entrepreneurspast extends onlineAtlas
 			'pageHeader' => false,
 			'h1' => '<h1>Atlas of entrepreneurship</h1>',
 			
-			// No header/footer, as embedded
-			'styleHeader'	=> false,
-			'styleFooter'	=> false,
-			
 			// Database
 			'database' => 'entrepreneurspast',
 			'username' => 'entrepreneurspast',
