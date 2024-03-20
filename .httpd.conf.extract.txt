@@ -2,15 +2,15 @@
 
 #   Example usage in httpd.conf:
 #   
-#   # Online atlas
-#   Include /path/to/online-atlas/.httpd.conf.extract.txt
-#   Use MacroEntrepreneursPast "/public-url/entrepreneurspast" "/path/to/entrepreneurspast" "/path/to/online-atlas" "/path/to/online-atlas/:/path/to/smarty/:/path/to/php/libraries/"
+#   # Entrepreneurs Past
+#   Include /path/to/entrepreneurspast/.httpd.conf.extract.txt
+#   Use MacroEntrepreneursPast "/entrepreneurspast" "/path/to/entrepreneurspast"
 
 
-<Macro MacroEntrepreneursPast $applicationBaseUrl $localRepoPath $baseRepoPath $includePath>
+<Macro MacroEntrepreneursPast $baseUrl $repoPath>
 	
-	# Load base codebase
-	Include $baseRepoPath/.httpd.conf.extract.txt
-	Use MacroOnlineAtlas "$applicationBaseUrl" "$localRepoPath" "$baseRepoPath" "Entrepreneurs Past" "$includePath"
+	# Load base codebase directives
+	Include $repoPath/vendor/campop/online-atlas/.httpd.conf.extract.txt
+	Use MacroOnlineAtlas "$baseUrl" "$repoPath" "Entrepreneurs Past"
 	
 </Macro>

@@ -7,7 +7,7 @@ $settings = array (
 );
 
 # Load and run the class
-require_once ('entrepreneurspast/entrepreneurspast.php');
+require_once ('vendor/autoload.php');
 new entrepreneurspast ($settings);
 
 ?>

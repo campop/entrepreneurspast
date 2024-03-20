@@ -1,0 +1,13 @@
+{
+    "name": "campop/entrepreneurspast",
+    "description": "Atlas of entrepreneurship",
+    "type": "project",
+    "license": "GPL-3.0-only",
+    "minimum-stability": "stable",
+    "require": {
+        "campop/online-atlas": "^1.0"
+    },
+    "autoload": {
+        "files": ["entrepreneurspast.php"]
+    }
+}
