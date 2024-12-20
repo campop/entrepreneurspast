@@ -419,23 +419,6 @@ class entrepreneurspast extends onlineAtlas
 		parent::main ();
 		
 	}
-	
-	
-	# Home page
-	public function home ($additionalCss = false)
-	{
-		# Set local styles - reduction of panel from 330px down by 70px
-		$additionalCss = '
-			#onlineatlas #mapcontainers nav {width: 260px;}
-			#onlineatlas .activearea {right: 260px;}
-			#onlineatlas .leaflet-control-layers, #onlineatlas .leaflet-control-attribution, #onlineatlas .summary {right: 260px;}
-			#onlineatlas .summary {width: 270px;}
-			#onlineatlas .geocoder input {width: 200px;}
-		';
-		
-		# Run the main map
-		return parent::home ($additionalCss);
-	}
 }
 
 ?>
