@@ -11,34 +11,18 @@ class entrepreneurspast extends onlineAtlas
 			
 			// Application name
 			'applicationName' => 'Atlas of entrepreneurship',
-			'pageHeader' => false,
 			'h1' => '<h1>Atlas of entrepreneurship</h1>',
 			
-			// Database
-			'database' => 'entrepreneurspast',
-			'username' => 'entrepreneurspast',
-			'password' => NULL,
-			
-			// Geocoder
-			'geocoderApiKey' => NULL,		// Obtain at https://www.cyclestreets.net/api/apply/
+			// Datasets
+			'years' => array (1851, 1861, 1871, 1881, 1891, 1901, 1911),
 			
 			// First run message
 			'firstRunMessageHtml' =>
 				  '<p><strong>Welcome to the Atlas of entrepreneurship, from CAMPOP</strong></p>'
 				. '<p>The Atlas of Entrepreneurship website helps you explore changes over 1851-1911 and access the underlying data.</p>',
 			
-			// CSV downloads
-			'downloadFilenameBase' => 'entrepreneurspast',
-			'downloadInitialNotice' => "This data has been produced from the BBCE (PI: R.J. Bennett) with funding from the ESRC (ES/M010953), using an enhanced version of the digital census data from Schurer, K. and Higgs, E. (2014) Integrated Census Microdata (I-CeM), 1851-1911 [data collection] Colchester, Essex: UK Data Archive [distributor] SN: 7481, http://dx.doi.org/10.5255/UKDA-SN-7481-1; and Bennett, R., Smith, H., Van Lieshout, C., Montebruno Bondi, P., and Newton, G. (2020) BBCE - The British Business Census of Entrepreneurs [data collection] Colchester, Essex, UK data Archives [distributor].",
-			
 			// Disable full descriptions
 			'enableFullDescriptions' => false,
-			
-			// Datasets
-			'datasets' => array (1851, 1861, 1871, 1881, 1891, 1901, 1911),
-			
-			// Disable zoomed out mode
-			'zoomedOut' => false,
 			
 			// Name field for summary box
 			'farField' => 'REGDIST',
@@ -57,8 +41,15 @@ class entrepreneurspast extends onlineAtlas
 			),
 			
 			// Defaults
-			'defaultDataset' => 1881,
+			'defaultYear' => 1881,
 			'defaultField' => 'N_EntsTot',
+			
+			// Geocoder
+			'geocoderApiKey' => NULL,		// Obtain at https://www.cyclestreets.net/api/apply/
+			
+			// CSV downloads
+			'downloadFilenameBase' => 'entrepreneurspast',
+			'downloadInitialNotice' => "This data has been produced from the BBCE (PI: R.J. Bennett) with funding from the ESRC (ES/M010953), using an enhanced version of the digital census data from Schurer, K. and Higgs, E. (2014) Integrated Census Microdata (I-CeM), 1851-1911 [data collection] Colchester, Essex: UK Data Archive [distributor] SN: 7481, http://dx.doi.org/10.5255/UKDA-SN-7481-1; and Bennett, R., Smith, H., Van Lieshout, C., Montebruno Bondi, P., and Newton, G. (2020) BBCE - The British Business Census of Entrepreneurs [data collection] Colchester, Essex, UK data Archives [distributor].",
 			
 			// Fields
 			'expandableHeadings' => true,
@@ -379,30 +370,6 @@ class entrepreneurspast extends onlineAtlas
 		
 		# Return the defaults
 		return $defaults;
-	}
-	
-	
-	# Database structure
-	public function databaseStructureSpecificFields ()
-	{
-		# Compile the SQL
-		$sql = "
-			  /* Domain-specific fields */
-			  `REGDIST` VARCHAR(255) NOT NULL COMMENT 'Registration district',
-			  `CEN` INT(11) NOT NULL COMMENT 'CEN (e.g. from CEN_1851)',
-			  `TOWN` VARCHAR(255) NOT NULL COMMENT 'Town',
-			  `UrbanClass` VARCHAR(255) NOT NULL COMMENT 'Urban classification',
-		";
-		
-		# Add each data field
-		foreach ($this->settings['fields'] as $field => $attributes) {
-			if (!isSet ($attributes['general']) && !in_array ($field, array ('TYPE', '_'))) {
-				$sql .= "\n\t\t\t  `{$field}` DECIMAL(14,7) NULL COMMENT '" . str_replace ("'", "\\'", $attributes['label']) . "',";
-			}
-		}
-		
-		# Return the SQL
-		return $sql;
 	}
 	
 	
